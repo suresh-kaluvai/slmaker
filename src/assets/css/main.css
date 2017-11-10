@@ -10,11 +10,10 @@
   vertical-align: middle; }
 
 body {
-  background-color: #e7eaee; }
+  background-color: #fff; }
 
 .wizardBox {
-  padding: 0 5% 5% 5%;
-  min-height: 15%; }
+  padding: 0 5% 5% 5%; }
 
 .center-content {
   text-align: center; }

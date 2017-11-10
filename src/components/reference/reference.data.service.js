@@ -47,6 +47,8 @@ class ReferenceDataService {
                         label: 'Zip',
                         type: 'text',
                         name: 'receiverZip',
+                        validator: /(^\d{5}$)|(^\d{5}-\d{4}$)/,
+                        message: 'This field must be a valid zip code'
                     }
                 ]
             },
@@ -78,6 +80,8 @@ class ReferenceDataService {
                         label: 'Zip',
                         type: 'text',
                         name: 'senderZip',
+                        validator: /(^\d{5}$)|(^\d{5}-\d{4}$)/,
+                        message: 'This field must be a valid zip code'
                     }
                 ]
             },
@@ -89,6 +93,7 @@ class ReferenceDataService {
                         label: 'Weight',
                         type: 'number',
                         name: 'packageWeight',
+                        message: 'This field must be a number'
                     }
                 ]
             },

@@ -29,41 +29,17 @@ var paths = {
 	]
 };
 
-/**
-	 * define your proxies if you need 'em
-	 * https://www.npmjs.com/package/http-proxy-middleware
- 	 */
-// var proxy = proxyMiddleware(["/openam", "/30"], {
-// 	changeOrigin: true,
-// 	target: "https://apps.development.aamc.org",
-// 	secure: false //dunno why this is required even though we have the certificate and key defined...
-// });
-
 gulp.task('serve', function () {
 	'use strict'
-	/* sass compile on change
-	 * browserSync will handle live updates to browser
-	 *
-	*/
+
 	gulp.watch('src/**/*.scss', ['sass']);
-	/**
-	 * component file change reload
-	 */
+
 	gulp.watch(path.join(paths.components, '/**/*.js'), ['documentation', 'reload']);
-	/**
-	 * browserSync for local
-	 * https://browsersync.io/docs
-	 */
-
-
 
 	serve({
 		port: process.env.PORT || 8443,
-		host: os.hostname().toLowerCase() + ".adm.aamc.org",
-		https: {
-			key: "ssl/angular-bootstrap.pem",
-			cert: "ssl/angular-bootstrap-cert.pem"
-		},
+		host: os.hostname().toLowerCase() + "",
+
 		open: false,
 		files: [].concat(
 			'src/assets/css/main.css',
@@ -77,7 +53,6 @@ gulp.task('serve', function () {
 				'/src': './src'
 			},
 			middleware: [
-				//proxy
 			]
 		},
 	});
@@ -90,16 +65,11 @@ gulp.task('serve-dist', function () {
 	'use strict'
 	serve({
 		port: process.env.PORT || 8443,
-		host: os.hostname().toLowerCase() + ".adm.aamc.org",
-		https: {
-			key: "ssl/angular-bootstrap.pem",
-			cert: "ssl/angular-bootstrap-cert.pem"
-		},
+		host: os.hostname().toLowerCase() + "",
 		open: false,
 		server: {
 			baseDir: ['dist'],
 			middleware: [
-				//proxy
 			]
 		}
 	});

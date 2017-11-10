@@ -2,8 +2,8 @@ import * as angular from 'angular';
 import wizardComponent from './wizard.component';
 
 /**
- *This is the sample component that was generated
- *@module home
+ *This is the component which generates the shipping label forms
+ *@module wizard
  */
 let wizardModule = angular.module('wizard', [])
     .config(function ($stateProvider) {
