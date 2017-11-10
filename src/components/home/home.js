@@ -9,7 +9,7 @@ let homeModule = angular.module('home', [])
     .config(function ($stateProvider) {
         $stateProvider.state({
             name: "home",
-            url: "/",
+            url: "/he",
             template: "<home></home>"
         });
     })

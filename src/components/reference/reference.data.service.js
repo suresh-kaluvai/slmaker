@@ -52,7 +52,7 @@ class ReferenceDataService {
             },
             {
                 step: 1,
-                title: "Senders's Address",
+                title: "Sender's Address",
                 pageData: [
                     {
                         label: 'Name',
@@ -87,7 +87,7 @@ class ReferenceDataService {
                 pageData: [
                     {
                         label: 'Weight',
-                        type: 'text',
+                        type: 'number',
                         name: 'packageWeight',
                     }
                 ]

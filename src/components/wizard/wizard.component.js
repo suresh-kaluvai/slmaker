@@ -9,14 +9,15 @@ class WizardController {
 
     $onInit() {
         let $ctrl = this;
-        $ctrl.LabelData = {}
-        console.log($ctrl.wizardContext);
-        
+        $ctrl.LabelData = {};
+
         $ctrl.context = $ctrl.wizardContext[0];
         $ctrl.totalSteps = $ctrl.wizardContext.length;
         $ctrl.previousIndex = false;
         $ctrl.currentIndex = 0;
         $ctrl.nextIndex = 1;
+
+        $ctrl.isFormValid = false;
     }
 
     goToPreviousStep(previousIndex) {

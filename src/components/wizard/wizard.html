@@ -1,7 +1,10 @@
-<h1>Finally A wizard</h1>
-<form-generator model-obj="$ctrl.LabelData" context="$ctrl.context"></form-generator>
+<div class="wizardBox">
+        <wizard-header wizard-title="$ctrl.context.title" current-step="$ctrl.context.step" total-steps="$ctrl.totalSteps"></wizard-header>
 
-<wizard-navigation previous-index="$ctrl.previousIndex" next-index="$ctrl.nextIndex" form-valid="true"
-        on-previous="$ctrl.goToPreviousStep(value)" on-next="$ctrl.goToNextStep(value)"
-        on-continue="$ctrl.goToReview()">
-</wizard-navigation>
+        <form-generator model-obj="$ctrl.LabelData" context="$ctrl.context" form-valid="$ctrl.isFormValid"></form-generator>
+
+        <wizard-navigation previous-index="$ctrl.previousIndex" next-index="$ctrl.nextIndex" form-valid="$ctrl.isFormValid"
+                on-previous="$ctrl.goToPreviousStep(value)" on-next="$ctrl.goToNextStep(value)"
+                on-continue="$ctrl.goToReview()">
+        </wizard-navigation>
+</div>

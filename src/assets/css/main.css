@@ -1,24 +1,20 @@
-.about-dl dt {
-  color: #622892; }
+.wizard {
+  width: 60%;
+  height: 20%;
+  margin-top: 6%;
+  margin-left: 20%;
+  border: 1px solid #ccc;
+  background-color: #f3f3f3; }
+
+.table.review-table > tbody > tr > td {
+  vertical-align: middle; }
 
 body {
   background-color: #e7eaee; }
 
-.app {
-  margin-top: 162px;
-  min-height: 81vh; }
+.wizardBox {
+  padding: 0 5% 5% 5%;
+  min-height: 15%; }
 
-.app.app-expanded {
-  margin-top: 225px;
-  min-height: 111vh; }
-
-.hero-spacing {
-  letter-spacing: 2.5px; }
-
-aamc-footer {
-  max-height: 10vh; }
-
-.box-shadow {
-  -webkit-box-shadow: -7px -4px 9px 0px #8c8a8c;
-  -moz-box-shadow: -7px -4px 9px 0px #8c8a8c;
-  box-shadow: -7px -4px 9px 0px #8c8a8c; }
+.center-content {
+  text-align: center; }

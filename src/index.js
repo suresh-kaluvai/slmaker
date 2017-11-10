@@ -9,7 +9,7 @@ let app = angular.module('app', [
     'ui.router',
     componentModules.name
 ]).config(function ($urlRouterProvider) {
-    $urlRouterProvider.otherwise("/");
+    $urlRouterProvider.otherwise("/wizard");
 });
 
 // System.import("appConfig!json")

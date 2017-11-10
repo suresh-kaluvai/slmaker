@@ -1,22 +1,31 @@
 <div>
-    <form name="wizardForm_{{$ctrl.context.step}}">
+    <form name="$ctrl.formName" class="form-horizontal">
+        {{$ctrl.formValid}}---
         <fieldset>
             <div class="row" ng-repeat="pageField in $ctrl.context.pageData">
 
-                <div class="col-lg-6 col-lg-12" ng-switch="pageField.type">
+                <div ng-switch="pageField.type">
                      <div class="form-group" ng-switch-when="radio">
-                        <label for="{{pageField.name}}">{{ pageField.label }} <span class="text-danger">*</span></label>
-                        <input type="text" class="form-control" name="{{pageField.name}}" id="{{pageField.name}}"
-                            ng-model="$ctrl.modelObj[$ctrl.context.step][pageField.name]"
-                         required/>
-                        <!--ng-model="$ctrl.data.firstName"-->
+                        <label class="control-label col-sm-4" for="{{pageField.name}}">{{ pageField.label }}</label>
+                        <div class="col-sm-8">
+                            <div class="radio" ng-repeat="option in pageField.data">
+                                <label><input type="radio" name="{{pageField.name}}" ng-model="$ctrl.modelObj[$ctrl.context.step][pageField.name]" value="{{ option.value }}">{{ option.label }}</label>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="form-group" ng-switch-when="number">
+                        <label class="control-label col-sm-2" for="{{pageField.name}}">{{ pageField.label }}</label>
+                        <div class="col-sm-10">
+                            <input type="number" class="form-control" name="{{pageField.name}}" id="{{pageField.name}}"
+                                ng-model="$ctrl.modelObj[$ctrl.context.step][pageField.name]" min="0" required/>
+                        </div>
                     </div>
                     <div class="form-group" ng-switch-default>
-                        <label for="{{pageField.name}}">{{ pageField.label }} <span class="text-danger">*</span></label>
-                        <input type="text" class="form-control" name="{{pageField.name}}" id="{{pageField.name}}" 
-                            ng-model="$ctrl.modelObj[$ctrl.context.step][pageField.name]"
-                        required/>
-                        <!--ng-model="$ctrl.data.firstName"-->
+                        <label class="control-label col-sm-2" for="{{pageField.name}}">{{ pageField.label }}</label>
+                        <div class="col-sm-10">
+                            <input type="text" class="form-control" name="{{pageField.name}}" id="{{pageField.name}}"
+                                ng-model="$ctrl.modelObj[$ctrl.context.step][pageField.name]" required/>
+                        </div>
                     </div>
                 </div>
             </div>

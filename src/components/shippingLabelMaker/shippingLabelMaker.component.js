@@ -1,6 +1,5 @@
 import template from './ShippingLabelMaker.html!text';
 
-
 class ShippingLabelMakerController {
     constructor($state) {
         'ngInject';
