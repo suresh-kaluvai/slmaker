@@ -1,0 +1,93 @@
+<side-menu-layout>
+    <side-menu id="tech-menu">
+        <ul class="nav">
+            <li class="nav-item" ui-sref="about({'#': 'ux'})" ng-click="$ctrl.goto()"><a href="#ux" class="nav-link" ng-class="{'active': $ctrl.onScreen === 'ux'}">UX-Framework</a></li>            
+            <li class="nav-item" ui-sref="about({'#': 'es6'})" ng-click="$ctrl.goto()"><a href="#components" class="nav-link" ng-class="{'active': $ctrl.onScreen === 'es6'}">ES6</a></li>
+            <li class="nav-item" ui-sref="about({'#': 'components'})" ng-click="$ctrl.goto()"><a href="#components" class="nav-link" ng-class="{'active': $ctrl.onScreen === 'components'}">Components</a></li>
+        </ul>
+    </side-menu>
+    <content>
+        <div id="ux" class="aamc-box" on-screen="ux" onscreen-handler="$ctrl.onscreenHandler">
+            <h2 class="text-muted">AAMC-UX-FRAMEWORK</h2>
+            <hr clas="m-y-2" />
+            <p class="lead">The AAMC UX framework contains a comprehensive guide to styling your apps per the AAMC approved guidelines. It
+                is built on top of Bootstrap 4 with customizations added for branding and approved styling. This project contains the SASS/CSS your application needs. The yeoman generator has already put in the appropriate
+                dependencies so that this is project is pulled in. Please check out the detailed examples and code below</p>
+                
+            
+            <ul class="list-inline">
+                <li class="list-inline-item"><i class="fa fa-code"></i> <a href="https://gitlab.aamc.org/ngaamc/aamc-ux-framework/tree/master"> Code</a></li>
+                <li class="list-inline-item"><i class="fa fa-bookmark"></i> <a href="http://evl8-docker-01v.adm.aamc.org:9001/"> Gallery</a></li>
+            </ul>
+        </div>
+        <div class="aamc-box" on-screen="es6" id="es6" onscreen-handler="$ctrl.onscreenHandler">
+            <h2 class="text-muted">ES 6</h2>
+            <hr clas="m-y-2" />
+            
+            <dl class="row">
+                <dt class="col-sm-3">ES6 Primer</dt>
+                <dd class="col-sm-9"><a href="http://tcornilliac.github.io/presentations/es6-primer">http://tcornilliac.github.io/presentations/es6-primer</a></dd>
+                <dt class="col-sm-3">Module Loader</dt>
+                <dd class="col-sm-9"><a href="https://jspm.io">https://jspm.io</a></dd>
+                <dt class="col-sm-3">Transpiler</dt>
+                <dd class="col-sm-9"><a href="https://babeljs.io/">https://babeljs.io/</a></dd>
+                <dt class="col-sm-3"></dt>
+                <dd class="col-sm-9"></dd>
+            </dl>
+        </div>
+        <div class="aamc-box" id="components" on-screen="components" onscreen-handler="$ctrl.onscreenHandler">
+            <h2 class="text-muted">Components</h2>
+            <hr clas="m-y-2" />
+
+            <blockquote class="blockquote">
+                <p class="lead">An application is a tree of components: Ideally, the whole application should be a tree of components that
+                    implement clearly defined inputs and outputs, and minimize two-way data binding. That way, it's easier
+                    to predict when data changes and what the state of a component is.</p>
+                <footer class="blockquote-footer"><cite title="Source Title"><a href="https://docs.angularjs.org/guide/component">Angular Developer Guide</a></cite></footer>
+            </blockquote>
+            <h3>AAMC Shared Components</h3>
+            <dl class="about-dl">
+                <dt>UIUX/components</dt>
+                <dd>
+                    <p>Contains a collection of presentation layer components such as dropdowns, tabs, modals, etc</p>
+                    <ul class="list-inline">
+                        <li class="list-inline-item"><i class="fa fa-code"></i> <a href="https://gitlab.aamc.org/uiux/components/tree/master"> Code</a></li>
+                        <li class="list-inline-item"><i class="fa fa-bookmark"></i> <a href="https://apps.development.aamc.org/uiux-components"> Gallery</a></li>
+                    </ul>
+                    <hr clas="m-y-2" />
+                </dd>
+                <dt>IAM/components</dt>
+                <dd>
+                    <p>Contains the components required for Identity Access Management (IAM) functions</p>
+                    <ul class="list-inline">
+                        <li class="list-inline-item"><i class="fa fa-code"></i> <a href="https://gitlab.aamc.org/iam/components/tree/master"> Code</a></li>
+                        <li class="list-inline-item"><i class="fa fa-bookmark"></i> <a href="https://apps.development.aamc.org/IAM-components"> Gallery</a></li>
+                    </ul>
+                    <hr clas="m-y-2" />
+                </dd>
+                <dt>NGAAMC/core</dt>
+                <dd>
+                    <p>Contains the core services and components that your application relies on (config-service, log-service,
+                        etc)</p>
+                    <ul class="list-inline">
+                        <li class="list-inline-item"><i class="fa fa-code"></i> <a href="https://gitlab.aamc.org/ngaamc/core/tree/master"> Code</a></li>
+                        <li class="list-inline-item"><i class="fa fa-bookmark"></i> <a href="https://apps.development.aamc.org/ngAAMC-core"> Gallery</a></li>
+                    </ul>
+                    <hr clas="m-y-2" />
+                </dd>
+                <dt>PAYMENT/components (TBD)</dt>
+                <dd>
+                    <p>Contains the components to required to collect payments</p>
+                    <p class="text-muted">Not yet in place</p>
+                </dd>
+            </dl>
+            <h3>Generating a new component</h3>
+            <p>You can generate a new component by using the following <a href="https://github.com/kdevar/generator-component.git">generator</a></p>
+            
+
+        </div>
+        
+
+        
+    </content>
+</side-menu-layout>

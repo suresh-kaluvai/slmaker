@@ -1,0 +1,57 @@
+<div>
+    <div class="row">
+        <h1>Review Label</h1>
+    </div>
+    <div class="row">
+        <div class="col-md-6 col-sm-12">
+            <label>Cost of the Shipping </label>
+        </div>
+        <div class="col-md-6 col-sm-12">
+            {{ $ctrl.referenceDataService.calculateShippingCost($ctrl.content.weight, shippingOption) | currency }}
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-md-6 col-sm-12">
+            <label>Receiver's Address </label>
+        </div>
+        <div class="col-md-6 col-sm-12">
+            <address>
+                {{$ctrl.content.to.name }} <br>
+                {{$ctrl.content.to.street }} <br>
+                {{$ctrl.content.to.city }} <br>
+                {{$ctrl.content.to.state }} <br>
+                {{$ctrl.content.to.zip }} <br>
+            </address>
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-md-6 col-sm-12">
+            <label>Sender's Address </label>
+        </div>
+        <div class="col-md-6 col-sm-12">
+            <address>
+                {{$ctrl.content.from.name }} <br>
+                {{$ctrl.content.from.street }} <br>
+                {{$ctrl.content.from.city }} <br>
+                {{$ctrl.content.from.state }} <br>
+                {{$ctrl.content.from.zip }} <br>
+            </address>
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-md-6 col-sm-12">
+            <label>Package Weight</label>
+        </div>
+        <div class="col-md-6 col-sm-12">
+            {{ $ctrl.content.weight }} lbs
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-md-6 col-sm-12">
+            <label>Shipping Option</label>
+        </div>
+        <div class="col-md-6 col-sm-12">
+            {{ $ctrl.content.shippingOption === 1 ? 'Ground' :  'Priority' }}
+        </div>
+    </div>
+</div>

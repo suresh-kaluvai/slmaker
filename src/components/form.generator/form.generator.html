@@ -1,0 +1,25 @@
+<div>
+    <form name="wizardForm_{{$ctrl.context.step}}">
+        <fieldset>
+            <div class="row" ng-repeat="pageField in $ctrl.context.pageData">
+
+                <div class="col-lg-6 col-lg-12" ng-switch="pageField.type">
+                     <div class="form-group" ng-switch-when="radio">
+                        <label for="{{pageField.name}}">{{ pageField.label }} <span class="text-danger">*</span></label>
+                        <input type="text" class="form-control" name="{{pageField.name}}" id="{{pageField.name}}"
+                            ng-model="$ctrl.modelObj[$ctrl.context.step][pageField.name]"
+                         required/>
+                        <!--ng-model="$ctrl.data.firstName"-->
+                    </div>
+                    <div class="form-group" ng-switch-default>
+                        <label for="{{pageField.name}}">{{ pageField.label }} <span class="text-danger">*</span></label>
+                        <input type="text" class="form-control" name="{{pageField.name}}" id="{{pageField.name}}" 
+                            ng-model="$ctrl.modelObj[$ctrl.context.step][pageField.name]"
+                        required/>
+                        <!--ng-model="$ctrl.data.firstName"-->
+                    </div>
+                </div>
+            </div>
+        </fieldset>
+    </form>
+</div>

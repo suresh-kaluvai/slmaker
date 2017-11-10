@@ -1,0 +1,24 @@
+.about-dl dt {
+  color: #622892; }
+
+body {
+  background-color: #e7eaee; }
+
+.app {
+  margin-top: 162px;
+  min-height: 81vh; }
+
+.app.app-expanded {
+  margin-top: 225px;
+  min-height: 111vh; }
+
+.hero-spacing {
+  letter-spacing: 2.5px; }
+
+aamc-footer {
+  max-height: 10vh; }
+
+.box-shadow {
+  -webkit-box-shadow: -7px -4px 9px 0px #8c8a8c;
+  -moz-box-shadow: -7px -4px 9px 0px #8c8a8c;
+  box-shadow: -7px -4px 9px 0px #8c8a8c; }
